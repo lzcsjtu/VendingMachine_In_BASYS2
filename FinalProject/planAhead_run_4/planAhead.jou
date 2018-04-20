@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# PlanAhead v14.3 (64-bit)
+# Build 209282 by xbuild on Thu Oct 18 20:50:53 MDT 2012
+# Start of session at: Wed Apr 11 15:57:53 2018
+# Process ID: 5224
+# Log file: C:/Users/12117/FinalProject/planAhead_run_4/planAhead.log
+# Journal file: C:/Users/12117/FinalProject/planAhead_run_4/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/12117/FinalProject/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin L3 [get_ports {drinkSW[2]}]
+endgroup
+startgroup
+set_property package_pin K3 [get_ports {drinkSW[1]}]
+endgroup
+startgroup
+set_property package_pin B4 [get_ports {drinkSW[0]}]
+endgroup
+startgroup
+set_property package_pin G3 [get_ports coin_outSW]
+endgroup
+startgroup
+set_property package_pin P11 [get_ports insertcoinSW]
+endgroup
+save_design

@@ -1,0 +1,6 @@
+verilog work "seg7_display.v"
+verilog work "pb_pulse.v"
+verilog work "siganl_decoder.v"
+verilog work "control.v"
+verilog work "clk_div.v"
+verilog work "VendingMachine_top.v"

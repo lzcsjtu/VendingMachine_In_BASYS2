@@ -1,0 +1,33 @@
+//! **************************************************************************
+// Written by: Map P.40xd on Wed Apr 11 23:56:11 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "point" LOCATE = SITE "N13" LEVEL 1;
+COMP "coin_outSW" LOCATE = SITE "G3" LEVEL 1;
+COMP "a_to_g<0>" LOCATE = SITE "M12" LEVEL 1;
+COMP "a_to_g<1>" LOCATE = SITE "L13" LEVEL 1;
+COMP "clk" LOCATE = SITE "B8" LEVEL 1;
+COMP "a_to_g<2>" LOCATE = SITE "P12" LEVEL 1;
+COMP "a_to_g<3>" LOCATE = SITE "N11" LEVEL 1;
+COMP "a_to_g<4>" LOCATE = SITE "N14" LEVEL 1;
+COMP "a_to_g<5>" LOCATE = SITE "H12" LEVEL 1;
+COMP "a_to_g<6>" LOCATE = SITE "L14" LEVEL 1;
+COMP "BTN<0>" LOCATE = SITE "G12" LEVEL 1;
+COMP "BTN<1>" LOCATE = SITE "C11" LEVEL 1;
+COMP "BTN<2>" LOCATE = SITE "M4" LEVEL 1;
+COMP "BTN<3>" LOCATE = SITE "A7" LEVEL 1;
+COMP "AN<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "insertcoinSW" LOCATE = SITE "P11" LEVEL 1;
+COMP "AN<1>" LOCATE = SITE "J12" LEVEL 1;
+COMP "AN<2>" LOCATE = SITE "M13" LEVEL 1;
+COMP "AN<3>" LOCATE = SITE "K14" LEVEL 1;
+COMP "drinkSW<0>" LOCATE = SITE "B4" LEVEL 1;
+COMP "drinkSW<1>" LOCATE = SITE "K3" LEVEL 1;
+COMP "drinkSW<2>" LOCATE = SITE "L3" LEVEL 1;
+COMP "display_mode<0>" LOCATE = SITE "M5" LEVEL 1;
+COMP "display_mode<1>" LOCATE = SITE "M11" LEVEL 1;
+COMP "display_mode<2>" LOCATE = SITE "P7" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

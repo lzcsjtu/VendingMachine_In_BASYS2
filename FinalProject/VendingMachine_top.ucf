@@ -1,0 +1,30 @@
+
+
+NET "BTN[0]" LOC = G12;
+NET "BTN[1]" LOC = C11;
+NET "BTN[2]" LOC = M4;
+NET "BTN[3]" LOC = A7;
+NET "clk" LOC = B8;
+NET "point" LOC = N13;
+NET "display_mode[2]" LOC = P7;
+NET "display_mode[1]" LOC = M11;
+NET "display_mode[0]" LOC = M5;
+NET "AN[3]" LOC = K14;
+NET "AN[2]" LOC = M13;
+NET "AN[1]" LOC = J12;
+NET "AN[0]" LOC = F12;
+NET "a_to_g[6]" LOC = L14;
+NET "a_to_g[5]" LOC = H12;
+NET "a_to_g[4]" LOC = N14;
+NET "a_to_g[3]" LOC = N11;
+NET "a_to_g[2]" LOC = P12;
+NET "a_to_g[1]" LOC = L13;
+NET "a_to_g[0]" LOC = M12;
+
+# PlanAhead Generated physical constraints 
+
+NET "drinkSW[2]" LOC = L3;
+NET "drinkSW[1]" LOC = K3;
+NET "drinkSW[0]" LOC = B4;
+NET "coin_outSW" LOC = G3;
+NET "insertcoinSW" LOC = P11;

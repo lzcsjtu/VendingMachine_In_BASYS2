@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.3 (64-bit)
+# Build 209282 by xbuild on Thu Oct 18 20:50:53 MDT 2012
+# Start of session at: Mon Apr 09 23:01:11 2018
+# Process ID: 11620
+# Log file: C:/Users/12117/FinalProject/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/12117/FinalProject/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/12117/FinalProject/pa.fromHdl.tcl
+update_compile_order -fileset sim_1

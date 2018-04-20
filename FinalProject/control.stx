@@ -1,0 +1,39 @@
+Release 14.3 - xst P.40xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/12117/FinalProject/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/12117/FinalProject/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "control.v" in library work
+ERROR:HDLCompilers:26 - "control.v" line 35 unexpected token: 'output'
+ERROR:HDLCompilers:28 - "control.v" line 114 'point' has not been declared
+ERROR:HDLCompilers:28 - "control.v" line 115 'point' has not been declared
+ERROR:HDLCompilers:26 - "control.v" line 117 expecting 'endcase', found 'always'
+Module <control> compiled
+ERROR:HDLCompilers:26 - "control.v" line 117 expecting 'endmodule', found '@'
+ERROR:HDLCompilers:26 - "control.v" line 117 unexpected token: ')'
+ERROR:HDLCompilers:26 - "control.v" line 126 unexpected token: '.'
+ERROR:HDLCompilers:26 - "control.v" line 129 expecting '*)', found 'EOF'
+ERROR:HDLCompilers:26 - "control.v" line 129 unexpected token: 'EOF'
+Analysis of file <"control.prj"> failed.
+--> 
+
+Total memory usage is 311580 kilobytes
+
+Number of errors   :    9 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
