@@ -10,45 +10,43 @@ Target Device  : xc3s100e
 Target Package : cp132
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Wed Apr 11 23:56:10 2018
+Mapped Date    : Tue Apr 24 19:16:47 2018
 
 Mapping design into LUTs...
 Running directed packing...
 Running delay-based LUT packing...
 Running related packing...
 Updating timing models...
-WARNING:PhysDesignRules:367 - The signal <coin_outSW_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
 
 Design Summary
 --------------
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    1
+Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:            58 out of   1,920    3%
-  Number of 4 input LUTs:               190 out of   1,920    9%
+  Number of Slice Flip Flops:           183 out of   1,920    9%
+  Number of 4 input LUTs:               512 out of   1,920   26%
 Logic Distribution:
-  Number of occupied Slices:            132 out of     960   13%
-    Number of Slices containing only related logic:     132 out of     132 100%
-    Number of Slices containing unrelated logic:          0 out of     132   0%
+  Number of occupied Slices:            304 out of     960   31%
+    Number of Slices containing only related logic:     304 out of     304 100%
+    Number of Slices containing unrelated logic:          0 out of     304   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         234 out of   1,920   12%
-    Number used as logic:               190
-    Number used as a route-thru:         44
+  Total Number of 4 input LUTs:         578 out of   1,920   30%
+    Number used as logic:               512
+    Number used as a route-thru:         66
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 25 out of      83   30%
+  Number of bonded IOBs:                 22 out of      83   26%
   Number of BUFGMUXs:                     1 out of      24    4%
   Number of MULT18X18SIOs:                2 out of       4   50%
 
-Average Fanout of Non-Clock Nets:                2.76
+Average Fanout of Non-Clock Nets:                2.93
 
 Peak Memory Usage:  347 MB
-Total REAL time to MAP completion:  1 secs 
+Total REAL time to MAP completion:  2 secs 
 Total CPU time to MAP completion:   1 secs 
 
 NOTES:

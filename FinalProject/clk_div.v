@@ -20,33 +20,33 @@
 //////////////////////////////////////////////////////////////////////////////////
 module clk_div(
    input clk,
-   input clr,
+   input coin_out,
    output reg clk_50hz,
    output reg clk_1000hz);
 
-reg [15:0] clk_50_cnt;
+reg [31:0] clk_50_cnt;
 reg [14:0] clk_1000_cnt;
 
-always@(posedge clk or posedge clr) begin
-	if(clr)
+always@(posedge clk or posedge coin_out) begin
+	if(coin_out)
 		clk_50_cnt <= 0;
-	else if(clk_50_cnt == 16'd49999)
+	else if(clk_50_cnt == 32'd3999999)
 		clk_50_cnt <= 0;
 	else
 		clk_50_cnt <= clk_50_cnt + 1; 
 end
 
-always@(posedge clk or posedge clr) begin
-	if(clr)
+always@(posedge clk or posedge coin_out) begin
+	if(coin_out)
 		clk_50hz <= 1'b0;
-	else if(clk_50_cnt == 16'd49999)
+	else if(clk_50_cnt == 32'd3999999)
 		clk_50hz <= ~clk_50hz;
 	else
 		clk_50hz <= clk_50hz;
 end
 	
-always@(posedge clk or posedge clr) begin
-	if(clr)
+always@(posedge clk or posedge coin_out) begin
+	if(coin_out)
 		clk_1000_cnt <= 0;
 	else if(clk_1000_cnt == 15'd24999)
 		clk_1000_cnt <= 0;
@@ -54,8 +54,8 @@ always@(posedge clk or posedge clr) begin
 		clk_1000_cnt <= clk_1000_cnt + 1;
 end
 
-always@(posedge clk or posedge clr) begin
-	if(clr)
+always@(posedge clk or posedge coin_out) begin
+	if(coin_out)
 		clk_1000hz <= 1'b0;
 	else if(clk_1000_cnt == 15'd24999)
 		clk_1000hz <= ~clk_1000hz;

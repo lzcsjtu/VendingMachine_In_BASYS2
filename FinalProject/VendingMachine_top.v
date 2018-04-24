@@ -20,12 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 module VendingMachine_top(
     input [3:0] BTN,
-    input insertcoinSW,
-    input [2:0]drinkSW,
-    input coin_outSW,
+    input [4:0]SW,
     input clk,
     output [3:0] AN,
-    output [2:0] display_mode,
     output [6:0] a_to_g,
     output point);
 
@@ -33,46 +30,49 @@ wire clk_50hz;
 wire clk_1000hz;
 wire wu_jiao;
 wire yi_yuan;
-wire clr;
+wire coin_out;
 wire coca_cola;
 wire oolong;
 wire redtea;
-wire coin_out;
-wire mode;
+wire inquire_coca_cola;
+wire inquire_oolong;
+wire inquire_redtea;
+wire fill_up;
 
-assign mode = insertcoinSW;
-
-signal_decoder s_d(.insertcoinSW(insertcoinSW),
-				   .drinkSW(drinkSW),
-				   .coin_outSW(coin_outSW),
+signal_decoder s_d(.SW(SW),
 				   .BTN(BTN),
+				   .coin_out(coin_out),
+				   .clk(clk),
+
 				   .wu_jiao(wu_jiao),
 				   .yi_yuan(yi_yuan),
-				   .clr(clr),
-				   .clk(clk),
 				   .coca_cola(coca_cola),
 				   .oolong(oolong),
 				   .redtea(redtea),
-				   .coin_out(coin_out));
+				   .inquire_coca_cola(inquire_coca_cola),
+				   .inquire_oolong(inquire_oolong),
+				   .inquire_redtea(inquire_redtea),
+				   .fill_up(fill_up));
 
 clk_div c_d(.clk(clk),
-			.clr(clr),
+			.coin_out(coin_out),
 			.clk_50hz(clk_50hz),
 			.clk_1000hz(clk_1000hz));
 
-control cl(.mode(mode),
-		   .clk(clk),
+control cl(.clk(clk),
 		   .clk_50hz(clk_50hz),
 		   .clk_1000hz(clk_1000hz),
-		   .clr(clr),
 		   .coin_out(coin_out),
+		   .fill_up(fill_up),
 		   .wu_jiao(wu_jiao),
 		   .yi_yuan(yi_yuan),
 		   .coca_cola(coca_cola),
 		   .oolong(oolong),
 		   .redtea(redtea),
+		   .inquire_coca_cola(inquire_coca_cola),
+		   .inquire_oolong(inquire_oolong),
+		   .inquire_redtea(inquire_redtea),
 		   .AN(AN),
-		   .display_mode(display_mode),
 		   .a_to_g(a_to_g),
 		   .point(point));
 

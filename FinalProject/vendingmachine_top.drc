@@ -1,11 +1,8 @@
 Release 14.3 Drc P.40xd (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Wed Apr 11 23:56:27 2018
+Tue Apr 24 19:17:12 2018
 
 drc -z VendingMachine_top.ncd VendingMachine_top.pcf
 
-WARNING:PhysDesignRules:367 - The signal <coin_outSW_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-DRC detected 0 errors and 1 warnings.  Please see the previously displayed
-individual error or warning messages for more details.
+DRC detected 0 errors and 0 warnings.

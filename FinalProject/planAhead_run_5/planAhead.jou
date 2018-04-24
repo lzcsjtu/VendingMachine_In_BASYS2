@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.3 (64-bit)
+# Build 209282 by xbuild on Thu Oct 18 20:50:53 MDT 2012
+# Start of session at: Tue Apr 24 18:00:35 2018
+# Process ID: 9720
+# Log file: C:/Users/12117/Documents/GitHub/VendingMachine_In_BASYS2/FinalProject/planAhead_run_5/planAhead.log
+# Journal file: C:/Users/12117/Documents/GitHub/VendingMachine_In_BASYS2/FinalProject/planAhead_run_5/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/12117/Documents/GitHub/VendingMachine_In_BASYS2/FinalProject/pa.fromHdl.tcl
+update_compile_order -fileset sim_1

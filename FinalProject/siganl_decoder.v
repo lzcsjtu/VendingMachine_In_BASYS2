@@ -19,18 +19,20 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module signal_decoder(
-    input insertcoinSW,
-    input [2:0]drinkSW,
-    input coin_outSW,
+    input [4:0]SW,
     input [3:0] BTN,
     input clk,
+    
     output reg wu_jiao,
     output reg yi_yuan,
-    output reg clr,
+    output reg coin_out,
     output reg coca_cola,
     output reg oolong,
     output reg redtea,
-    output reg coin_out);
+    output reg inquire_coca_cola,
+    output reg inquire_oolong,
+    output reg inquire_redtea,
+    output reg fill_up);
 
 wire BTN0;
 wire BTN1;
@@ -60,7 +62,7 @@ pb_pulse pp3(.btn(BTN3),
 			 .pbPulse(PBPULSE3));
 
 always@(*) begin	
-	if(insertcoinSW)
+	if(SW[0])
 		wu_jiao = PBPULSE1;
 	else
 		wu_jiao = 1'b0;
@@ -68,45 +70,64 @@ always@(*) begin
 end
 
 always@(*) begin
-	if(insertcoinSW)
+	if(SW[0])
 		yi_yuan = PBPULSE2;
 	else
 		yi_yuan = 1'b0;
 end
 
 always@(*) begin
-	if(insertcoinSW)
-		clr = PBPULSE3;
-	else
-		clr = 1'b0;
+	coin_out = PBPULSE3;
 end
 
+
 always@(*) begin
-	if(drinkSW[0])
+	if(SW[1])
 		coca_cola = PBPULSE0;
 	else
 		coca_cola = 1'b0;
 end
 
 always@(*) begin
-	if(drinkSW[1])
+	if(SW[2])
 		oolong = PBPULSE0;
 	else
 		oolong = 1'b0;
 end
 
 always@(*) begin
-	if(drinkSW[2])
+	if(SW[3])
 		redtea = PBPULSE0;
 	else
 		redtea = 1'b0;
 end
 
 always@(*) begin
-	if(insertcoinSW || coin_outSW)
-		coin_out = PBPULSE0;
+	if(SW[1])
+		inquire_coca_cola = PBPULSE1;
 	else
-		coin_out = 1'b0;
+		inquire_coca_cola = 1'b0;
+end
+
+always@(*) begin
+	if(SW[2])
+		inquire_oolong = PBPULSE1;
+	else
+		inquire_oolong = 1'b0;
+end
+
+always@(*) begin
+	if(SW[3])
+		inquire_redtea = PBPULSE1;
+	else
+		inquire_redtea = 1'b0;
+end
+
+always@(*) begin
+	if(SW[4])
+		fill_up = PBPULSE0;
+	else
+		fill_up = 1'b0;
 end
 
 endmodule
